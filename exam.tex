@@ -309,4 +309,84 @@
     \begin{equation*}
         R_{2323} = \alpha r\sin^2\theta
     \end{equation*}
+
+    \section*{Задача 6.}
+    ФН: 82071 $\rightarrow$ Меркурий
+
+    Точна формула за отместване на перихелия: \\
+    Кеплеровото движение на една планета около Слънцето (т.е. в неговото гравитационно поле на Шварцшилд), може да се даде със следните 
+    формули:
+
+    $
+        r(\varphi) = \frac{p}{1-e.\cos_q u}
+    $
+    или 
+    $
+        \frac{1}{r} = \frac{cn^2(\frac{u}{2})}{r_{min}} + \frac{sn^2(\frac{u}{2})}{r_{max}}
+    $, 
+    където $r(\varphi)$ е елиптична функция, а $r_{min}$ и $r_{max}$ са най-малкото и най-голямото
+    разстояние от Слънцето до планетата. \\ Също така имаме, че: \\
+    $
+        r_{min} = (1-e)r_{\text{средно}}
+    $ и 
+    $
+        r_{max}=(1+e)r_{\text{средно}}
+    $, където $e$ е ексцентрицитетът на орбитата.
+    \\ Също имаме, че: \\
+    $p = \frac{2}{\frac{1}{r_{max}} + \frac{1}{r_{min}}}$.
+
+    Използваме: 
+    \begin{equation*}
+        \left( \frac{dr}{d\varphi} \right)^2 = \frac{c^2_1-h}{c^2_2}r^4 + \frac{ah}{c^2_2}r^3 - r^2+ar = \frac{dr(r-r_1)(r-r_{min})(r_{max}-r)}{r_1r_{min}r_{max}}
+    \end{equation*}
+    и от формулите на Виет: $\frac{1}{\alpha} = \frac{1}{r_1} + \frac{1}{r_{min}} + \frac{1}{r_{max}}$ \\ 
+    $\frac{1}{r_1} = \frac{1}{\alpha} - \frac{1}{r_{min}} - \frac{1}{r_{max}}$.
+    \\
+    Трябва да пресметнем елиптичните интеграли от първи род: 
+    \begin{equation*}
+        \begin{aligned}
+            K = \int_{0}^{1} \frac{ds}{\sqrt[]{(1-s^2)(1-\kappa^2s^2)}}, \kappa^2 = \frac{\frac{1}{r_{min}} - \frac{1}{r_{max}}}{\frac{1}{r_1} - \frac{1}{r_{max}}} \\
+            K' = \int_{0}^{1} \frac{ds}{\sqrt[]{(1-s^2)(1-\kappa^{'2}s^2)}}, \kappa^{'2} = 1-\kappa^2 \\
+    \end{aligned}
+    \end{equation*}
+
+    Реалният период на $r$ по $\varphi$ е равен на:
+
+    \begin{equation*}
+        T = \frac{4K}{\sqrt[]{\frac{\alpha}{r_1} - \frac{\alpha}{r_{max}}}} = \frac{2\pi}{M\left(\sqrt[]{\frac{\alpha}{r_1} - \frac{\alpha}{r_{max}}}, \sqrt[]{\frac{\alpha}{r_1} - \frac{\alpha}{r_{min}}}\right)} - 2\pi
+    \end{equation*}
+
+    За Слънцето: 
+    \begin{equation*}
+        \alpha = 2\frac{GM}{c^2} \approx 2. \frac{6,679.10^{-11}m^3kg^{-1}s^{-2} . 1,989.10^{30}kg}{(299 792 458m/s)^2} \approx 2, 95km
+    \end{equation*}
+
+    \begin{equation*}
+        q- \frac{\alpha}{r_{min}} - \frac{2\alpha}{r_{max}} \approx 0, 99999985
+    \end{equation*}
+
+    \begin{equation*}
+        \begin{aligned}
+            1 - \frac{2\alpha}{r_{min}} - \frac{\alpha}{r_{max}} \approx 0,99999983 \\
+            \implies \varDelta\varphi \approx 2\pi \left( \frac{1}{0,99999984} - 1 \right) \approx 1, 005.10^{-6}
+        \end{aligned}
+    \end{equation*}
+
+    Отместването по перихелия по точната формула е: \\ 
+    $\approx \varDelta\varphi \frac{100\text{ години}}{87, 969 \text{ дни}} \approx 41''$
+
+    Приближение: 
+    \begin{equation*}
+        \begin{aligned}
+            \varDelta\varphi \frac{2\pi}{M\left( 1-\frac{\alpha}{2r_{min}} - \frac{\alpha}{r_{max}}, 1-\frac{\alpha}{r_{min}} - \frac{\alpha}{2r_{max}} \right)} - 2\pi \approx 
+            \frac{2\pi}{1 - \frac{3\alpha}{\varphi r_{min}} - \frac{3\alpha}{4r_{max}}} - 2\pi \approx \\
+            \approx \frac{3}{2}.\frac{\pi\alpha}{\frac{1}{r_{min}} + \frac{1}{r_{max}}} = \frac{3}{2}\pi\alpha \frac{1+e+1-e}{r_{\text{средно}(1-e)(1+e)}} = \frac{3\pi\alpha}{r_{\text{средно}(1-e^2)}} \rightarrow \text{формула на Айнщайн}
+        \end{aligned}
+    \end{equation*}
+
+    \begin{equation*}
+        \varDelta\varphi \approx \frac{3\pi\alpha}{r_{text{средно}}(1-e^2)} \approx 43''
+    \end{equation*}
+
+    Получихме резултати за отместването на перихелия на Меркурий по точната формула и по тази на Айнщайн.
 \end{document}
